@@ -1,6 +1,9 @@
 <p>ifelse works!</p>
-<input type="text" #text placeholder="input your age" (keyup)="0">
-<p>{{text.value}}</p>
+<input type="text" placeholder="input your age" [(ngModel)]="age">
+<button (click)="changeToFalse()">Don't show</button>
+<button (click)="changeToTrue()">Show</button>
+
+<p *ngIf="show">{{age}}</p>
 
 @if(true){
   <p>contains a</p>
